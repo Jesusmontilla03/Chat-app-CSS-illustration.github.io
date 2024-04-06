@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --Pale-Violet-sub-heading-at-the-top-of-the-app-UI: hsl(276, 100%, 81%);
+    --Moderate-Violet-chat-on-the-left: hsl(276, 55%, 52%);
+    --Desaturated-Dark-Violet-chat-on-the-right: hsl(271, 15%, 43%);
+    --Grayish-Blue-placeholder-text: hsl(206, 6%, 79%);
+    --Very-Dark-Desaturated-Violet-main-heading: hsl(271, 36%, 24%);
+    --Dark-Grayish-Violet-paragraph: hsl(270, 7%, 64%);
+
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+
+    --White: hsl(0, 0%, 100%);
+    --Light-Grayish-Violet-app-background: hsl(270, 20%, 96%);
+    --Very-Dark-Desaturated-Violet-submit-button-background: hsl(271, 36%, 24%);
+    --Very-Light-Magenta-radio-button-outline: hsl(289, 100%, 72%);
+}
+
+* {
+    font-family: "Rubik", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*--------------- MOBILE DESIGN --------------*/
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--Light-Grayish-Violet-app-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-background {
+    position: absolute;
+    left: -65%;
+    top: -71%;
+    border-radius: 0 0 600px 600px;
+    width: 450px;
+    min-height: 1000px;
+    background: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
+}
+.phone-container {
+    margin: 90px auto 90px auto;
+    width: 260px;
+    background-color: var(--White);
+    border-radius: 30px;
+    padding: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 4px 22px -11px;
+    
+    & .space-phone {
+        width: 55%;
+        height: 20px;
+        background-color: var(--White);
+        border-radius: 0 0 18px 18px;
+        position: absolute;
+        z-index: 2;
+    }
+}
+.contact-container {
+    width: 100%;
+    height: 68px;
+    border-radius: 25px 25px 7px 7px;
+    background: linear-gradient( to right, var(--Light-Violet), var(--Light-Magenta));
+    display: flex;
+    align-items: center;
+    padding: 25px 14px 0 14px;
+    position: relative;
+    z-index: 1;
+}
+.arrow-left {
+    width: 14px;
+    height: 14px;
+}
+.avatar-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    margin: 0 12px 0 4px;
+}
+.info-contact {
+    line-height: 16px;
+    & h1 {
+        font-size: 0.70rem;
+        font-weight: 450;
+        color: var(--Light-Grayish-Violet-app-background);
+    }
+    & p {
+        font-size: 0.52rem;
+        color: var(--Pale-Violet-sub-heading-at-the-top-of-the-app-UI);
+    }
+}
+.option-icon {
+    width: 4px;
+    height: 9px;
+    position: absolute;
+    right: 15px;
+}
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: var(--Light-Grayish-Violet-app-background);
+    border-radius: 0 0 15px 15px;
+}
+.message {
+    font-weight: 400;
+    padding: 8px;
+    font-size: 0.51rem;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+.message-text-you {
+    width: 60%;
+    padding-right: 9px;
+    border-bottom-left-radius: 4px;
+    color: var(--Moderate-Violet-chat-on-the-left);
+    background-color:  hsl(280, 19%, 91%);
+}
+.message-photos {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-bottom: 0;
+
+    & img {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+    }
+}
+.message-text-he {
+    align-self: flex-end;
+    color: var(--Desaturated-Dark-Violet-chat-on-the-right);
+    background-color: var(--White);
+    border-bottom-right-radius: 4px;
+    max-width: 59%;
+    box-shadow: 0 2px 6px -4px;
+}
+.chat-container .message:nth-child(5) {
+    margin-bottom: 15px;
+}
+.message-audio {
+    width: 72%;
+    padding: 6px 20px 6px 12px;
+    border-bottom-left-radius: 4px;
+    background: linear-gradient(to right, var(--Light-Magenta), var(--Light-Violet));
+    display: grid;
+    grid-template-columns: min-content auto auto;
+    align-items: center;
+    color: var(--Light-Grayish-Violet-app-background);
+
+    & .circle {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 1px solid var(--Very-Light-Magenta-radio-button-outline);
+    }
+    & p {
+        font-size: 0.41rem;
+        font-weight: 300;
+        justify-self: flex-start;
+        margin-left: 12px;
+    }
+    & span {
+        font-size: 0.75rem;
+        font-weight: 700;
+        justify-self: flex-end;
+    }
+}
+.box-text {
+    width: 100%;
+    background-color: var(--White);
+    display: flex;
+    justify-content: space-between;
+    padding: 4px;
+    padding-left: 28px;
+    border-radius: 20px;
+    margin-top: 8px;
+
+    & p {
+        color: var(--Grayish-Blue-placeholder-text);
+        font-size: 0.55rem;
+        align-self: flex-end;
+        margin-bottom: 4px;
+    }
+    & button {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border: none;
+        background-color: var(--Very-Dark-Desaturated-Violet-submit-button-background);
+        & img {
+            width: 16px;
+            height: 14px;
+        }
+    }
+}
+.specifics {
+    text-align: center;
+
+    & h1 {
+        color: var(--Very-Dark-Desaturated-Violet-main-heading);
+        font-weight: 500;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    & p {
+        width: 310px;
+        color: var(--Dark-Grayish-Violet-paragraph);
+        margin-bottom: 60px;
+    }
+}
+footer {
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+    color: var(--Very-Dark-Desaturated-Violet-main-heading);
+
+    & a {
+        text-decoration: none;
+        color: var(--Light-Violet);
+    }
+    & a:hover {
+        font-weight: 600;
+    }
+}
