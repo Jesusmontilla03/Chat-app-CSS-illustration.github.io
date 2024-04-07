@@ -41,7 +41,7 @@ body {
     height: 1000px;
     position: absolute;
     left: -65%;
-    top: -72%;
+    top: -57%;
     border-radius: 0 0 600px 600px;
     background: linear-gradient(var(--Light-Magenta), var(--Light-Violet));
 }
@@ -301,5 +301,8 @@ footer {
             width: 450px;
             line-height: 24px;
         }
+    }
+    footer {
+        bottom: 4px;
     }
 }    
